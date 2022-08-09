@@ -4,5 +4,5 @@ opencv-python
 opencv-contrib-python
 opencv-python-headless
 gunicorn
-https://download.pytorch.org/whl/cpu/torch-1.4.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
+torch-nightly==1.0.0.dev20181129
 torchvision==0.2.1
