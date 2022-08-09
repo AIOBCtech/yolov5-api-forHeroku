@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def entry_point():
-    return " This is Facial Recognition API Status -->> Active "
+    return " This is Object Detection API Status -->> Active "
 
 @app.route('/vectors/', methods=[ 'POST'])
 def vectors():
