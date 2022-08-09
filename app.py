@@ -4,13 +4,13 @@ import torch
 import numpy as np
 from flask import Flask, flash, request, redirect, url_for,jsonify
 
-application = Flask(__name__)
+app = Flask(__name__)
 
-@application.route('/')
+@app.route('/')
 def entry_point():
     return " This is Facial Recognition API Status -->> Active "
 
-@application.route('/vectors/', methods=[ 'POST'])
+@app.route('/vectors/', methods=[ 'POST'])
 def vectors():
     if request.method == 'POST':
         print(1)
@@ -47,4 +47,5 @@ def vectors():
 
 
 if __name__ == '__main__':
-    application.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',port=int(os.environ.get('PORT', 5000)))
+    
