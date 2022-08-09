@@ -39,8 +39,7 @@ def vectors():
 
         model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
         results = model(fileName)
-        # print(results.print())
-        # print (results.pandas())
+
         jssson = results.pandas().xyxy[0].to_json(orient="records")
         print(results.pandas().xyxy[0].to_json(orient="records")) 
         return { 'ID' :str(argggu['ID']), 'message' :jssson}
